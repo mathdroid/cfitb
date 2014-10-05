@@ -11,12 +11,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 
 public class MainActivity extends ActionBarActivity {
-	
-	
+	//STATICS HERE BRO
+	public final static String EXTRA_MESSAGE = "com.muhammadmustadi.ClassFinderITB.MESSAGE";
 
 	//DECLARE VARIABLES HERE
 	//Button bNextPage;
@@ -78,6 +79,7 @@ public class MainActivity extends ActionBarActivity {
     public static class PlaceholderFragment extends Fragment {
     	
     	private Button btn;
+    	private EditText srchBar;
     	
         public PlaceholderFragment() {
         }
@@ -89,7 +91,7 @@ public class MainActivity extends ActionBarActivity {
             
             //DECLARE View in Fragments here
             btn = (Button) rootView.findViewById(R.id.button1);
-            
+            srchBar = (EditText) rootView.findViewById(R.id.editText1);
             //Create Listeners
             createListeners();
             
@@ -100,6 +102,8 @@ public class MainActivity extends ActionBarActivity {
         	btn.setOnClickListener(new OnClickListener(){
         		public void onClick(View V){
         			Intent iMaps = new Intent(getActivity(), MapsActivity.class);
+        			String message = srchBar.getText().toString();
+        			iMaps.putExtra(EXTRA_MESSAGE, message);
         			startActivity(iMaps);
         		}
         	});

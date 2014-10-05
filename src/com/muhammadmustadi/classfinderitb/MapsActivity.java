@@ -1,16 +1,25 @@
 package com.muhammadmustadi.classfinderitb;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MapsActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_maps);
+		//setContentView(R.layout.activity_maps);
+		Intent intent = getIntent();
+		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		
+		//Create text view
+		TextView dispText = new TextView(this);
+		dispText.setText(message);
+		setContentView(dispText);
 	}
 
 	@Override
