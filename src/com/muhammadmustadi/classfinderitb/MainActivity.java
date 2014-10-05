@@ -16,17 +16,16 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 	
+	
+
 	//DECLARE VARIABLES HERE
-	Button bNextPage;
-    
+	//Button bNextPage;
 	
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        //get view objects here
-        bNextPage = (Button) findViewById(R.id.button1);
         
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
@@ -34,19 +33,25 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+
+        //get view objects here
+        //bNextPage = (Button) findViewById (R.id.button1);
+        
+
         //create Listeners
-        createListeners();
+        //createListeners();
     }
-	
+	/*
 	private void createListeners(){
 		bNextPage.setOnClickListener(new OnClickListener() {
 			public void onClick(View v){
 				//OPEN MapsActivity pls
-				Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+				Intent intent = new Intent (this, MapsActivity.class);
 				startActivity(intent);
 			}
 		});
-	}
+	}*/
+	
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,7 +76,9 @@ public class MainActivity extends ActionBarActivity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-
+    	
+    	private Button btn;
+    	
         public PlaceholderFragment() {
         }
 
@@ -79,7 +86,24 @@ public class MainActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            
+            //DECLARE View in Fragments here
+            btn = (Button) rootView.findViewById(R.id.button1);
+            
+            //Create Listeners
+            createListeners();
+            
             return rootView;
         }
+        //Create individual listeners here.
+        private void createListeners(){
+        	btn.setOnClickListener(new OnClickListener(){
+        		public void onClick(View V){
+        			Intent iMaps = new Intent(getActivity(), MapsActivity.class);
+        			startActivity(iMaps);
+        		}
+        	});
+        }
+        
     }
 }
