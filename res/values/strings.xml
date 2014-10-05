@@ -4,5 +4,7 @@
     <string name="app_name">ClassFinderITB</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="s_main_button1">Get me to Maps page!</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

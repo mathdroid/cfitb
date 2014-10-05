@@ -1,31 +1,52 @@
 package com.muhammadmustadi.classfinderitb;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.Button;
 
 
 
 public class MainActivity extends ActionBarActivity {
-
-    @Override
+	
+	//DECLARE VARIABLES HERE
+	Button bNextPage;
+    
+	
+	
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        //get view objects here
+        bNextPage = (Button) findViewById(R.id.button1);
+        
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        //create Listeners
+        createListeners();
     }
-
+	
+	private void createListeners(){
+		bNextPage.setOnClickListener(new OnClickListener() {
+			public void onClick(View v){
+				//OPEN MapsActivity pls
+				Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+				startActivity(intent);
+			}
+		});
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
