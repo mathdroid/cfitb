@@ -13,14 +13,14 @@ public class MapsActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_maps);
+		setContentView(R.layout.activity_maps);
 		Intent intent = getIntent();
-		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		//String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 		
 		//Create text view
-		TextView dispText = new TextView(this);
-		dispText.setText(message);
-		setContentView(dispText);
+		//TextView dispText = new TextView(this);
+		//dispText.setText(message);
+		//setContentView(dispText);
 	}
 
 	@Override
