@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
@@ -107,6 +109,22 @@ public class MainActivity extends ActionBarActivity {
         			startActivity(iMaps);
         		}
         	});
+        	
+        	srchBar.setOnKeyListener(new OnKeyListener(){
+
+				@Override
+				public boolean onKey(View v, int keyCode, KeyEvent keyevent) {
+					// TODO Auto-generated method stub
+					if ((keyevent.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)){
+						
+						btn.performClick();
+						return true;
+					}
+					
+					return false;
+				}
+        	});
+        	
         }
         
     }
