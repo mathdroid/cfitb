@@ -1,12 +1,12 @@
 package com.muhammadmustadi.classfinderitb;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.app.Activity;
+import android.widget.Toast;
 
 public class MapsActivity extends ActionBarActivity {
 
@@ -15,8 +15,12 @@ public class MapsActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_maps);
 		Intent intent = getIntent();
-		//String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 		
+		Context context = getApplicationContext();
+		CharSequence text = message;
+		int duration = Toast.LENGTH_SHORT;
+		Toast.makeText(context, text, duration).show();
 		//Create text view
 		//TextView dispText = new TextView(this);
 		//dispText.setText(message);
