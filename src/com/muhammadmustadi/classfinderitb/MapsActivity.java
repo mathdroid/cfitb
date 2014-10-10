@@ -8,8 +8,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MapsActivity extends ActionBarActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
 
+public class MapsActivity extends ActionBarActivity {
+	
+	static final LatLng HAMBURG = new LatLng(53.558, 9.927);
+	static final LatLng ITB = new LatLng(-6.8905327,107.610585);
+
+	private GoogleMap map;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,6 +30,9 @@ public class MapsActivity extends ActionBarActivity {
 		CharSequence text = message;
 		int duration = Toast.LENGTH_SHORT;
 		Toast.makeText(context, text, duration).show();
+		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
+		        .getMap();
+		map.moveCamera(CameraUpdateFactory.newLatLngZoom(ITB, 15));
 		//Create text view
 		//TextView dispText = new TextView(this);
 		//dispText.setText(message);
