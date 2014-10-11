@@ -1174,7 +1174,7 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f0a0002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f06001a;
+        public static final int abc_search_url_text_holo=0x7f06001f;
         public static final int abc_search_url_text_normal=0x7f060017;
         public static final int abc_search_url_text_pressed=0x7f060019;
         public static final int abc_search_url_text_selected=0x7f060018;
@@ -1190,8 +1190,15 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f060006;
         public static final int common_signin_btn_light_text_focused=0x7f060007;
         public static final int common_signin_btn_light_text_pressed=0x7f060005;
-        public static final int common_signin_btn_text_dark=0x7f06001b;
-        public static final int common_signin_btn_text_light=0x7f06001c;
+        public static final int common_signin_btn_text_dark=0x7f060020;
+        public static final int common_signin_btn_text_light=0x7f060021;
+        public static final int dark_hint=0x7f06001b;
+        public static final int dark_text=0x7f06001c;
+        public static final int light_hint=0x7f06001d;
+        public static final int light_text=0x7f06001e;
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int red_500=0x7f06001a;
         public static final int wallet_bright_foreground_disabled_holo_light=0x7f06000f;
         /** 
          Wallet colors to support consistent Wallet fragment holo dark UI in client application
@@ -1210,8 +1217,8 @@ containing a value of this type.
         public static final int wallet_hint_foreground_holo_light=0x7f060011;
         public static final int wallet_holo_blue_light=0x7f060015;
         public static final int wallet_link_text_light=0x7f060016;
-        public static final int wallet_primary_text_holo_light=0x7f06001d;
-        public static final int wallet_secondary_text_holo_dark=0x7f06001e;
+        public static final int wallet_primary_text_holo_light=0x7f060022;
+        public static final int wallet_secondary_text_holo_dark=0x7f060023;
     }
     public static final class dimen {
         /**  Default height of an action bar. 

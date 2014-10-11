@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.muhammadmustadi.classfinderitb.MainActivity$PlaceholderFragment" >
+    tools:context="com.muhammadmustadi.classfinderitb.MainActivity$PlaceholderFragment"
+    android:background="#e51c23" >
 
     <Button
         android:id="@+id/button1"
@@ -14,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/s_main_button1" />
+        android:text="@string/s_main_button1"
+        android:textColor="@color/light_text" />
 
     <EditText
         android:id="@+id/editText1"
@@ -24,7 +26,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="21dp"
         android:ems="10"
-        android:hint="@string/s_main_search" >
+        android:hint="@string/s_main_search"
+        android:textColorHint="@color/light_hint" >
 
         <requestFocus />
     </EditText>
@@ -35,6 +38,7 @@
         android:layout_above="@+id/editText1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="37dp"
-        android:text="@string/app_name" />
+        android:text="@string/app_name"
+        android:textColor="@color/light_text" />
 
 </RelativeLayout>
