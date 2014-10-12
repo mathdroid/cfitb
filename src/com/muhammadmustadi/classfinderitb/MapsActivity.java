@@ -33,8 +33,7 @@ public class MapsActivity extends ActionBarActivity {
 		
 		int duration = Toast.LENGTH_SHORT;
 		Toast.makeText(context, text, duration).show();
-		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
-		        .getMap();
+		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(ITB, 15));
 		//Create text view
 		//TextView dispText = new TextView(this);

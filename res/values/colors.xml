@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
     
+	<item name="grey_50" type="color">#fafafa</item>
 	<item name="red_50" type="color">#fffde0dc</item>
 	<item name="red_500" type="color">#ffe51c23</item>
 	<item name="dark_hint" type="color">#1E000000</item>
