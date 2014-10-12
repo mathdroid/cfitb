@@ -2,6 +2,8 @@ package com.muhammadmustadi.classfinderitb;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -28,6 +30,8 @@ public class MapsActivity extends ActionBarActivity {
 		
 		Context context = getApplicationContext();
 		CharSequence text = message;
+		getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.red_500)));
+		
 		int duration = Toast.LENGTH_SHORT;
 		Toast.makeText(context, text, duration).show();
 		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))

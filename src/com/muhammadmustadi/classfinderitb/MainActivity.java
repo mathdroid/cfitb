@@ -1,6 +1,8 @@
 package com.muhammadmustadi.classfinderitb;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
@@ -37,12 +39,7 @@ public class MainActivity extends ActionBarActivity {
                     .commit();
         }
 
-        //get view objects here
-        //bNextPage = (Button) findViewById (R.id.button1);
-        
-
-        //create Listeners
-        //createListeners();
+        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.red_500))); // set your desired color
     }
 	/*
 	private void createListeners(){
