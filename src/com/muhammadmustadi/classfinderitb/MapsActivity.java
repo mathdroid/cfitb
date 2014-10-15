@@ -35,6 +35,8 @@ public class MapsActivity extends ActionBarActivity {
 		Toast.makeText(context, text, duration).show();
 		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(ITB, 15));
+		map.setMyLocationEnabled(true);
+		map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 		//Create text view
 		//TextView dispText = new TextView(this);
 		//dispText.setText(message);
